@@ -202,3 +202,9 @@ Generated:  = sum(lst) / len(lst)
 to see that. For that i take the embedding of generated output and target, run them trough embedding and the model. On last
 hidden stat i compute `Cosine similarity` to see how the model closely relates those two inputs. We can see that the model
 sees these two output closely related even tho they are two different lines of code.
+
+## Further improvements
+
+- If we want to use this model as real code complete, the dataset is prepared of finetuning using HuggingFace trainer API.
+- When finetuning we must be carefull that we dont overfit and monitor closely how is our model doing. Mainly on smaller GPT2 like models
+the risk of overfitting or making the model babble is from my experience very big
